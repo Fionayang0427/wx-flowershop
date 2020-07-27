@@ -1,0 +1,18 @@
+<!--pages/car/car.wxml-->
+<!--结算 -->
+<view bindtap="check" >点击结算</view>
+<view >：当前金额为{{allprice}}元</view>
+<!-- 获取商品 -->
+<view class="my-goods" >
+	<view wx:for="{{goods}}">
+		<view class="goodbox">
+			<image src="{{item.img}}"></image>
+			<view class="hidden">{{item.title}}</view>
+			<view >{{item.price*count[index].gcount}}元</view>
+      <view bindtap="add" class="add" data-id="{{index}}">+</view>
+      <text>{{count[index].gcount}}个</text>
+      <view bindtap="jian" class="jian" data-id="{{index}}">-</view>
+		</view>
+	</view>
+</view>
+

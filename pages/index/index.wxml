@@ -1,0 +1,29 @@
+<!-- 点击登陆 -->
+<view class="tologin" hidden="{{login}}" bindtap="tologin">登陆： </view>
+<view>欢迎您！{{user}}</view>
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" circular="{{true}}" class='my-swiper'>
+	<swiper-item>
+		<image src="/images/banner_01.png"></image>
+	</swiper-item>
+	<swiper-item>
+		<image src="/images/banner_02.png"></image>
+	</swiper-item>
+	<swiper-item>
+		<image src="/images/banner_03.png"></image>
+	</swiper-item>
+	<swiper-item>
+		<image src="/images/banner_04.png"></image>
+	</swiper-item>
+</swiper>
+<!-- 获取商品 -->
+<view class="my-goods">
+	<view wx:for="{{goodsarr}}">
+		<view class="goodbox">
+			<image src="{{item.img}}"></image>
+			<view>{{item.title}}</view>
+			<view>{{item.price}}元</view>
+			<view class="btn" bindtap="intocar" data-id="{{index}}">加入购物车</view>
+		</view>
+	</view>
+</view>

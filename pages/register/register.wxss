@@ -1,0 +1,30 @@
+/* pages/userinfo/userinfo.wxss */
+.myform{
+  /* background-color: red; */
+}
+.row{
+  display: flex;
+  padding-top: 8px;
+  padding-left: 40px;
+}
+.row input{
+  border: 1px solid black;
+  margin-left: 4px;
+}
+.btn{
+  background-color: green;
+  width: 300px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.group icon{
+  padding-left: 140px;
+}
+.to{
+  color: blue;
+  font-size: 12px;
+  text-decoration: underline;
+}

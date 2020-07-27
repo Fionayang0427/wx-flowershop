@@ -1,0 +1,28 @@
+<!--pages/userinfo/userinfo.wxml-->
+<!-- 登陆 -->
+
+	<view hidden="{{ifhidden}}">登陆：  </view>
+	<!--填写登陆表单 -->
+	<view class="myform" wx:if="{{!sub}}">
+		<view class="row">
+			<label>邮箱:</label><input bindinput="getemail"></input></view>
+		<view class="row">
+			<label>密码:</label><input bindinput="getpassw"></input></view>
+		<view class="btn" bindtap="handleSub">提交</view>
+	</view>
+
+	<!-- 登陆成功 -->
+	<view class="loginsuccess" wx:else>
+		<view class="group">
+			<icon type="success" size="50" />
+			<view bindtap="handleChange" class="btn">提交成功，回到主页
+			
+			</view>
+		</view>
+		<view bindtap="leavelogin" class="leave">退出当前账号</view>
+	</view>
+	<!-- 去注册 -->
+	<view class="to" bindtap="toregister">没有帐号？去注册</view>
+
+
+ 
